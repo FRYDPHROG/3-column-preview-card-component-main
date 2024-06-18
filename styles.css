@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);  /*paragraph*/
+    --Very-light-gray: hsl(0, 0%, 95%);            /*background, headings, buttons*/
+    --Lexend-Deca: 'Lexend Deca';
+    --Big-Shoulder: 'Big Shoulders Display';
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-light-gray);
+}
+
+.full-card{
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+}
+
+img{
+    margin-bottom: 2rem;
+}
+
+h2{
+    text-transform: uppercase;
+    color: var(--Very-light-gray);
+    font-family: var(--Big-Shoulder);
+    font-size: 40px;
+    margin-bottom: 2rem;
+}
+
+p{
+    color: var(--Transparent-white);
+    font-family: var(--Lexend-Deca);
+    margin-bottom: 5rem;
+    line-height: 1.8rem;
+}
+
+.card-1{
+    padding: 2rem;
+    background-color: var(--Bright-orange);
+    border-radius: 10px 0 0 10px;
+}
+
+.card-2{
+    padding: 2rem;
+    background-color: var(--Dark-cyan);
+}
+
+.card-3{
+    padding: 2rem;
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 10px 10px 0;
+}
+
+button{
+    cursor: pointer;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    border: 2px solid white;
+    font-family: var(--Lexend-Deca);
+}
+
+button:hover{
+    background-color: transparent;
+    color: var(--Very-light-gray);
+}
+
+.btn-1{
+    color: var(--Bright-orange)
+}
+
+.btn-2{
+    color: var(--Dark-cyan);
+}
+
+.btn-3{
+    color: var(--Very-dark-cyan);
+}
+
+@media (max-width: 900px){
+    .full-card{
+        width: 300px;
+        flex-direction: column;
+        margin: 50px;
+    }
+
+    .card-1{
+        border-radius: 10px 10px 0 0;
+    }
+
+    .card-3{
+        border-radius: 0 0 10px 10px;
+    }
+
+    p{
+        margin-bottom: 1.5rem;
+    }
+}
